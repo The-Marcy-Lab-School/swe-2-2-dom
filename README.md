@@ -130,13 +130,14 @@ Finally, there's an old `p` tag that we no longer want. Use the `removeOldInfo` 
 ### Question 7: makeAlphabet - modify.js
 Here is where things get interesting. We're going to do a bunch of stuff on this one!
 
-First, notice that there's a data attribute called `num-letters` on our alphabet list `ul` element. Data attributes are a great way to encode more information into a tag. We didn't cover them, but we've included resources to check out.
+First, notice that there's a data attribute called `num-letters` on our alphabet list `ol` element. Data attributes are a great way to encode more information into a tag. We didn't cover them, but we've included resources to check out.
 
-Here's a *super* quick tutorial
+Here's a *super* quick tutorial. Suppose we had the following `p` element with the `data-` attribute called `my-test` attribute with the value `"hello there"`:
 
 ```html
 <p id="main-text" data-my-test="hello there">Just a p tag</p>
 ```
+In JavaScript, we can grab the element and then reference its `data-` attribute called `my-test` with `.dataset.myTest`. The `dataset` property will be an object that has converted the `data-` attributes in `kabob-case` to `camelCase`.
 
 ```js
 const p = document.querySelector('#main-text');
@@ -148,21 +149,19 @@ And here's [*everything* you'd ever need to know about data attributes](https://
 
 
 Your job is to:
-* read from the data attribute using JS to get the number of letters we want to add.
-* Then, using our "create > modify > add" pattern from question 5, loop through and add `li`s with text content like: `A is letter #1 in the alphabet`. 
-* No need to put `id`s or `class`es on the `li`s. 
-* The `li`s *must* be children of the `#alphabet` `ul` tag.
+* Grab the element with the ID `"alphabet"`
+* Read from the `data-` attribute using JS to get the number of letters we want to add. (Remember to convert the `kabob-case` to `camelCase`)
+* create a loop that counts up to the number and, on each loop use the "create > modify > add" pattern from question 5 to add `li` elementss with text content like: `A is letter #1 in the alphabet`, `B is letter #2 in the alphabet` and so on...
+  * No need to put `id`s or `class`es on the `li`s. 
+  * The `li`s *must* be children of the `#alphabet` `ol` tag.
 
-This one is tricky, so we'll be helpful. If the dataset attribute is 3, then the list in the html would print:
+For example, if the `data-num-letters` attribute is `3`, then the list in the html would contain:
 
 ```
-A is letter #1 in the alphabet
-B is letter #2 in the alphabet
-C is letter #3 in the alphabet
+<li>A is letter #1 in the alphabet</li>
+<li>B is letter #2 in the alphabet</li>
+<li>C is letter #3 in the alphabet</li>
 ```
-
-Remember, each one of those lines is in an `li` tag.
-
 
 ### Question 8: makeBio
 Ok, so for dynamic information or user-entered info, the create, update, add pattern is safest. However, what if you have a big blob of HTML that *you* know is safe, and you want to insert it? Try the `.innerHTML` property.
