@@ -71,6 +71,9 @@ Mimic this pattern when you create your `index.js` file from scratch! If you ope
 ## Questions
 
 ### Question 1: getMainHeadingText - modify.js (READ)
+
+For these first two functions, make sure that your `modify.html` file is open in the browser. Then, inspect the page and look at the **Console** tab. There, you should see the console log output of your first two functions
+
 In the function `getMainHeadingText`, use the `querySelector` to grab the `H1` by it's `id`. Then, console.log the text of the element.
 
 **Helpful Resources**:
@@ -86,16 +89,19 @@ In the function `getAllMainText` you'll need to grab *all* the elements with the
 (For this one, look at the **other cases section**, as you can see there are a lot of possible solutions!)
 
 ### Question 3: setSubtitleText - modify.js (UPDATE)
-Now we're getting into grabbing *existing* elements, and updating them in some way. For this one, use the `setSubtitleText` function, and grab the subtitle `h2` element somehow (maybe `id` or the tag name?) and then update it's empty text content to say:
+
+The remaining questions will have you directly modifying the content of the `modify.html` page. You should see the content on the page changing as you write your JavaScript code!
+
+Now we're getting into grabbing *existing* elements, and updating them in some way. For this one, use the `setSubtitleText` function, and grab the subtitle `h2` element somehow (maybe `id` or the tag name?). It is currently an empty element so we want you to update its `textContent` to say:
 
 ```
 This is a subtitle!
 ```
 
 ### Question 4: modifyDivClassList - modify.js (UPDATE)
-Editing classes is going to be a *super* common task for you. So to do this correctly learn about the `classList` element property. We'll only need it's `add` and `remove` methods here, but it has a lot of useful ones, like `toggle`.
+Editing classes is going to be a *super* common task for you. So, to do this correctly, learn about the `classList` element property (see links below). We'll only need its `add` and `remove` methods here, but it has a lot of useful ones, like `toggle`.
 
-Anyway, inside `modifyDivClassList`, we'll edit out `#modify-classes` div. It has 2 classes on it. All we want to do is remove `bad-class`, and then add `new-class`. That means there will still be 2 classes on it by the time you're done.
+Inside `modifyDivClassList`, we'll edit out `#modify-classes` div. It has 2 classes on it. All we want to do is remove `"bad-class"`, and then add `"new-class"`. That means there will still be 2 classes on it by the time you're done.
 
 `classList` allows us to edit only the class names we need to, without touching the rest. Get good with it!
 
