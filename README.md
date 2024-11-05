@@ -101,7 +101,7 @@ This is a subtitle!
 ### Question 4: modifyDivClassList - modify.js (UPDATE)
 Editing classes is going to be a *super* common task for you. So, to do this correctly, learn about the `classList` element property (see links below). We'll only need its `add` and `remove` methods here, but it has a lot of useful ones, like `toggle`.
 
-Inside `modifyDivClassList`, we'll edit out `#modify-classes` div. It has 2 classes on it. All we want to do is remove `"bad-class"`, and then add `"new-class"`. That means there will still be 2 classes on it by the time you're done.
+Inside `modifyDivClassList`, we'll edit the `div#modify-classes` element. It has 2 classes on it. All we want to do is remove `"bad-class"`, and then add `"new-class"`. That means there will still be 2 classes on it by the time you're done.
 
 `classList` allows us to edit only the class names we need to, without touching the rest. Get good with it!
 
