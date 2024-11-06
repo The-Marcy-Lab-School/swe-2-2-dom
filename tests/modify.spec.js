@@ -62,7 +62,7 @@ describe(testSuiteName, () => {
     scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
-  it('should add an h1 to the body', async () => {
+  it('should add an h2 to the body with the text Another one!', async () => {
     const h2 = document.querySelector('#h2-test');
     expect(h2.textContent).toBe('Another one!');
 
